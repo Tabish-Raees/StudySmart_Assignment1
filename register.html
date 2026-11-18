@@ -11,13 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/register.css" rel="stylesheet">
+  <script src="js/register.js" defer></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg app-nav">
     <div class="container-xxl">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="StudySmart home"><span class="brand-mark">S</span><span>Study<span class="brand-light">Smart</span></span></a>
       <div class="navbar-collapse show" id="mainNav"><div class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-        <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="planner.html">Study planner</a><a class="nav-link active" href="register.html" aria-current="page">Register</a>
+        <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="media.html">Media &amp; Info</a><a class="nav-link active" href="register.html" aria-current="page">Register</a><a class="nav-link" href="services.html">Services</a><a class="nav-link" href="portfolio.html">Portfolio</a><a class="nav-link" href="contact.html">Contact</a>
       </div></div>
     </div>
   </nav>
@@ -31,17 +32,34 @@
           <div class="mb-3"><label for="student-name" class="form-label">Full name <span>*</span></label><input class="form-control" id="student-name" name="name" maxlength="70" autocomplete="name" placeholder="e.g. Ayesha Khan" required><div class="invalid-feedback">Enter your name.</div></div>
           <div class="mb-3"><label for="student-email" class="form-label">Email address <span>*</span></label><input class="form-control" id="student-email" name="email" type="email" maxlength="120" autocomplete="email" placeholder="you@example.com" required><div class="invalid-feedback">Enter a valid email address.</div></div>
           <div class="mb-3"><label for="student-program" class="form-label">Program or field of study</label><input class="form-control" id="student-program" name="program" maxlength="80" placeholder="e.g. Computer Science"></div>
-          <div class="mb-4"><label for="student-semester" class="form-label">Current semester</label><select class="form-select" id="student-semester" name="semester"><option value="">Choose a semester</option><option>Semester 1</option><option>Semester 2</option><option>Semester 3</option><option>Semester 4</option><option>Semester 5</option><option>Semester 6</option><option>Semester 7</option><option>Semester 8</option><option>Other</option></select></div>
+          <div class="mb-4"><label for="student-semester" class="form-label">Current semester</label><select class="form-select" id="student-semester" name="semester"><option value="">Choose a semester</option><option>Semester 1</option><option>Semester 2</option><option>Semester 3</option><option>Semester 4</option><option selected>Semester 5</option><option>Semester 6</option><option>Semester 7</option><option>Semester 8</option><option>Other</option></select></div>
+          <h3 class="form-section-title">More profile details</h3>
+          <div class="assignment-fields">
+            <div class="mb-3"><label for="student-password" class="form-label">Create a password *</label><input class="form-control" id="student-password" name="password" type="password" minlength="8" maxlength="20" required autocomplete="new-password"><div class="invalid-feedback">Use 8 to 20 characters.</div></div>
+            <div class="mb-3"><label for="study-date" class="form-label">First study date *</label><input class="form-control" id="study-date" name="study-date" type="date" required></div>
+            <div class="mb-3"><label for="portfolio-url" class="form-label">Portfolio URL</label><input class="form-control" id="portfolio-url" name="portfolio-url" type="url" placeholder="https://example.com"></div>
+            <div class="mb-3"><label for="theme-color" class="form-label">Planner color</label><input class="form-control color-control" id="theme-color" name="theme-color" type="color" value="#0e6b50"></div>
+            <div class="mb-3"><label for="semester-number" class="form-label">Semester number (1–8)</label><input class="form-control" id="semester-number" name="semester-number" type="number" min="1" max="8" value="5"></div>
+            <div class="mb-3"><label for="study-time" class="form-label">Preferred study time</label><input class="form-control" id="study-time" name="study-time" type="time"></div>
+            <div class="mb-3 range-field"><label for="focus-level" class="form-label">Usual focus level: <output id="focus-value">6</output>/10</label><input id="focus-level" name="focus-level" type="range" min="1" max="10" value="6"></div>
+            <div class="mb-3"><label for="study-goal" class="form-label">A study goal</label><textarea class="form-control" id="study-goal" name="study-goal" rows="3" minlength="10" maxlength="250" placeholder="Write at least 10 characters"></textarea></div>
+            <div class="mb-3"><label for="study-file" class="form-label">Attach a study plan</label><input class="form-control" id="study-file" name="study-file" type="file" accept=".pdf,.doc,.docx"></div>
+            <fieldset class="choice-field mb-3"><legend class="form-label">Preferred reminder</legend><label><input type="radio" name="reminder" value="morning" checked> Morning</label><label><input type="radio" name="reminder" value="evening"> Evening</label></fieldset>
+            <div class="choice-field mb-3"><label><input type="checkbox" name="weekly-summary" checked> Show me a weekly study summary</label></div>
+            <div class="mb-3"><label for="profile-code" class="form-label">Profile code (read only)</label><input class="form-control" id="profile-code" name="profile-code" value="SS-2026-01" readonly></div>
+            <div class="mb-3"><label for="account-status" class="form-label">Account status</label><input class="form-control" id="account-status" value="Demo account" disabled></div>
+          </div>
           <div class="storage-notice"><span aria-hidden="true">⌂</span><p>This classroom prototype has no account system or database. The example fields are not submitted or stored.</p></div>
           <div class="form-actions"><button class="btn btn-emerald" type="reset">Clear example fields</button></div>
         </form>
       </div>
       <aside class="profile-side">
         <div class="side-art" aria-hidden="true"><div class="side-circle"></div><div class="side-card"><span class="side-check">✓</span><b>A plan that feels like yours</b><small>Small steps. Clear priorities.</small><div class="side-lines"><i></i><i></i><i></i></div></div><span class="side-star star-a">✳</span><span class="side-star star-b">✦</span></div>
-        <div class="side-copy"><div class="eyebrow">A GOOD PLACE TO BEGIN</div><h2>Plan around<br>your study week.</h2><p>Keep your subjects and study commitments visible while you work through each task.</p><a href="planner.html">View a sample study plan <span>→</span></a></div>
+        <div class="side-copy"><div class="eyebrow">A GOOD PLACE TO BEGIN</div><h2>Plan around<br>your study week.</h2><p>Keep your subjects and study commitments visible while you work through each task.</p><a href="media.html">View a sample study plan <span>→</span></a></div>
       </aside>
     </section>
-    <footer class="app-footer"><a class="footer-brand" href="index.html">StudySmart</a><span>A student study planner concept · HTML and CSS</span><a href="planner.html">View sample plan →</a></footer>
+    <footer class="app-footer"><a class="footer-brand" href="index.html">StudySmart</a><span>A student study planner concept · HTML and CSS</span><a href="media.html">View sample plan →</a></footer>
   </main>
 </body>
 </html>
+
