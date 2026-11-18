@@ -13,3 +13,12 @@ h1,h2,.navbar-brand { font-family:Manrope,"DM Sans",sans-serif; letter-spacing:-
 .app-nav .navbar-collapse { display:flex; flex-basis:auto; flex-grow:1; align-items:center; }
 .app-nav .navbar-nav { display:flex; flex-direction:row; align-items:center; gap:18px; }
 @media(max-width:720px) { .app-nav .navbar-collapse { flex-basis:100%; } .app-nav .navbar-nav { flex-wrap:wrap; justify-content:flex-end; gap:6px 12px; padding:8px 0; } }
+.form-section-title { margin:8px 0 16px; color:#26362e; font:800 15px Manrope,sans-serif; }
+.assignment-fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 14px; }
+.color-control { width:58px; min-height:38px; padding:4px; }
+.range-field input { width:100%; accent-color:var(--emerald); }
+.choice-field { display:flex; flex-direction:column; gap:8px; min-width:0; padding:10px; border:1px solid #e4ebe6; border-radius:9px; }
+.choice-field legend { float:none; width:auto; margin:0; }
+.choice-field label { color:#64736b; font-size:11px; }
+.choice-field input { margin-right:6px; accent-color:var(--emerald); }
+@media(max-width:560px) { .assignment-fields { grid-template-columns:1fr; } }

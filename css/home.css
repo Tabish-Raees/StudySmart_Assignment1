@@ -28,3 +28,6 @@ h1,h2,h3,.navbar-brand { font-family:Manrope,"DM Sans",sans-serif; letter-spacin
 .app-nav .navbar-collapse { display:flex; flex-basis:auto; flex-grow:1; align-items:center; }
 .app-nav .navbar-nav { display:flex; flex-direction:row; align-items:center; gap:18px; }
 .home-progress .home-progress-fill { width:40%; }
+.hero-study-photo { display:block; width:min(390px,100%); height:145px; margin:18px auto 0; border:4px solid #fff; border-radius:16px; object-fit:cover; box-shadow:0 12px 28px #1a533018; }
+.photo-credit { display:block; width:min(390px,100%); margin:5px auto 0; color:#75837b; font-size:9px; text-align:right; text-decoration:none; }
+@media(max-width:650px) { .hero-study-photo { width:min(345px,86%); height:125px; margin-top:15px; } }

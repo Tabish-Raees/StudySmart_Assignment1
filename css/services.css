@@ -1,0 +1,52 @@
+:root {
+  color-scheme: light;
+  --ink: #173b31;
+  --muted: #61766e;
+  --green: #147253;
+  --pale: #eef6f0;
+  --line: #dce8df;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #f8faf7; color: var(--ink); font-family: "DM Sans", sans-serif; }
+a { color: inherit; }
+.site-header { background: rgba(255,255,255,.94); border-bottom: 1px solid var(--line); }
+.site-nav { width: min(1120px, calc(100% - 40px)); min-height: 76px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font: 800 20px Manrope, sans-serif; text-decoration: none; white-space: nowrap; }
+.brand > span:last-child { color: var(--green); margin-left: -8px; }
+.brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; background: var(--green); color: #fff; font-size: 17px; }
+.nav-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
+.nav-links a { padding: 9px 11px; border-radius: 20px; color: #46635a; font-size: 13px; text-decoration: none; transition: background-color .2s ease, color .2s ease, transform .2s ease; }
+.nav-links a:hover, .nav-links a:focus-visible { background: var(--pale); color: var(--green); transform: translateY(-2px); }
+.nav-links .current { background: var(--green); color: #fff; }
+.page-shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.intro { max-width: 680px; margin: 76px 0 42px; }
+.eyebrow, .card-kicker { color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: .15em; }
+h1, h2 { font-family: Manrope, sans-serif; }
+h1 { margin: 14px 0; font-size: clamp(38px, 6vw, 62px); letter-spacing: -.055em; line-height: 1.05; }
+h1 span { color: var(--green); }
+.intro-copy { max-width: 590px; color: var(--muted); font-size: 17px; line-height: 1.75; }
+.service-list { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 20px; }
+.service-card { flex: 1 1 285px; max-width: 360px; padding: 28px; border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 12px 32px rgba(34,78,58,.06); transition: transform .24s ease, box-shadow .24s ease; }
+.service-image { display:block; width:100%; height:150px; margin:0 0 18px; border-radius:14px; object-fit:cover; }
+.service-card:hover { transform: translateY(-7px); box-shadow: 0 20px 40px rgba(34,78,58,.12); }
+.featured-card { background: linear-gradient(155deg, #edf6ef, #fff 65%); }
+.card-icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 16px; background: var(--pale); color: var(--green); font-size: 26px; }
+.icon-focus { background: #f9f1dd; color: #986e13; }
+.icon-profile { background: #edf0fb; color: #5662a0; }
+.card-kicker { margin: 25px 0 8px; font-size: 10px; }
+.service-card h2 { margin: 0 0 12px; font-size: 21px; letter-spacing: -.03em; }
+.service-card > p:not(.card-kicker) { min-height: 108px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.service-card > a { display: inline-flex; gap: 10px; align-items: center; margin-top: 10px; color: var(--green); font-size: 13px; font-weight: 700; text-decoration: none; }
+.service-card > a:hover span { transform: translateX(4px); }
+.service-card > a span { transition: transform .2s ease; }
+.next-step { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin: 65px 0; padding: 26px 30px; border-radius: 20px; background: #e9f3eb; }
+.next-step .eyebrow { margin: 0 0 7px; }
+.next-step h2 { margin: 0; font-size: 22px; }
+.primary-link { padding: 13px 18px; border-radius: 30px; background: var(--green); color: white; font-size: 13px; font-weight: 700; text-decoration: none; transition: background-color .2s ease, transform .2s ease; }
+.primary-link:hover { background: #0f5e44; transform: translateY(-2px); }
+.site-footer { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 24px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.site-footer .brand { font-size: 16px; }
+.site-footer > a:last-child { color: var(--green); text-decoration: none; }
+@media (max-width: 760px) { .site-nav { padding: 15px 0; align-items: flex-start; flex-direction: column; } .nav-links { justify-content: flex-start; } .intro { margin-top: 48px; } }
+@media (max-width: 520px) { .page-shell, .site-nav { width: min(100% - 28px, 1120px); } .nav-links a { padding: 8px; } .service-card { padding: 23px; } .next-step, .site-footer { align-items: flex-start; flex-direction: column; } }
